@@ -8,9 +8,18 @@
 
 :root {
   --primary-color: #2455a9;
+  --secondary-color: #ecf4fd;
+  --bg-color: #ecf4fd;
 }
 
-.mobile {
+.links {
+  display: none;
+}
+.web-logo {
+  width: 120px;
+  margin-left: 12px;
+}
+nav {
   width: 100%;
   padding: 12px;
   height: 50px;
@@ -112,12 +121,96 @@
   text-transform: uppercase;
   margin-top: 0px;
 }
+.services {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--bg-color);
+}
+.primary-card {
+  background-color: var(--primary-color);
+}
+.secondary-card {
+  background-color: var(--bg-color);
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.card {
+  width: 300px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card-image {
+  margin: 10px;
+  width: 278px;
+  height: 200px;
+}
+.text-header {
+  color: var(--primary-color);
+  text-align: center;
+}
+.summary-text {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.icons-container {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.secondary {
+  display: flex;
+  align-items: center;
+  color: black;
+}
 
 @media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+  }
   .banner h2 {
     text-align: left;
     margin-left: 20px;
     font-size: 40px;
+  }
+  .web-logo {
+    flex: 0.3;
+  }
+  .links {
+    display: block;
+  }
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+  .links {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+  }
+
+  .links > .middle a {
+    text-decoration: none;
+    color: #2c2c2e;
   }
   .banner {
     height: 600px;
@@ -129,8 +222,20 @@
     background-position: "bottom right";
   }
   .count {
-    width: 50%;
-    justify-content: space-around;
+    width: 38%;
+    justify-content: space-evenly;
+  }
+  .middle {
+    display: flex;
+    flex: 0.7;
+    justify-content: center;
+    gap: 100px;
+  }
+  .end {
+    display: flex;
+    flex: 0.2;
+    justify-content: end;
+    gap: 18px;
   }
   .content {
     padding: 0px 1.2em;
@@ -173,5 +278,17 @@
     text-align: center;
     font-weight: 100;
     font-size: 10px;
+  }
+  .mobile-sec {
+    display: none;
+  }
+  .end a {
+    text-decoration: none;
+    color: #2c2c2e;
+  }
+  .primary {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 2px 8px;
   }
 }
