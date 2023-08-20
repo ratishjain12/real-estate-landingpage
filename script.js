@@ -3,6 +3,13 @@ let btnNext = document.querySelector(".swiper-button-next");
 let btnPrev = document.querySelector(".swiper-button-prev");
 let pagination = document.querySelector(".swiper-pagination");
 
+let mobile = document.querySelector(".mobile-links");
+const mobileNav = document.querySelector(".icon");
+console.log(mobileNav);
+mobileNav.addEventListener("click", () => {
+  mobile.classList.toggle("active");
+});
+
 let slides = 1;
 
 var swiper = new Swiper(swiperObj, {
