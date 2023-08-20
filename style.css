@@ -139,7 +139,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 36px;
 }
 .card {
   width: 300px;
@@ -153,12 +153,13 @@ nav {
 .text-header {
   color: var(--primary-color);
   text-align: center;
+  font-size: 24px;
 }
 .summary-text {
   color: #000;
   text-align: center;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -181,6 +182,65 @@ nav {
   display: flex;
   align-items: center;
   color: black;
+}
+.content-cards {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.primary {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 2px 8px;
+}
+
+.swiper {
+  width: 95%;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.container {
+  height: 400px;
+  width: 300px;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(92, 93, 101, 0.52),
+      rgba(22, 21, 22, 0.73)
+    ),
+    url("assets/aranprime.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 426px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block !important;
+  }
 }
 
 @media (min-width: 768px) {
